@@ -1,3 +1,4 @@
+<!-- filepath: /Users/giorgiabazzanella/portfolio/post_aulab/resources/views/components/navbar.blade.php -->
 <nav class="navbar navbar-expand-lg fixed-top">
     <div class="container-fluid">
         <a class="navbar-brand fw-bold" href="{{ route('homepage') }}">

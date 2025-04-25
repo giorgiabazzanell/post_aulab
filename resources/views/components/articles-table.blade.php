@@ -1,4 +1,3 @@
-<!-- filepath: /Users/giorgiabazzanella/portfolio/post_aulab/resources/views/components/articles-table.blade.php -->
 <table class="table table-striped table-hover">
     <thead class="table-dark">
         <tr>

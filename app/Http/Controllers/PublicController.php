@@ -32,7 +32,7 @@ class PublicController extends Controller implements HasMiddleware
             ->take(4)
             ->get();
 
-        return view('homepage', compact('articles'));
+        return view('welcome', compact('articles'));
     }
 
     public function careers()

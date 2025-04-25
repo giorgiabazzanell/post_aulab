@@ -17,15 +17,21 @@
                         <label for="role" class="form-label">Per quale ruolo ti stai candidando?</label>
                         <select name="role" id="role" class="form-control">
                             <option value="" selected disabled>Seleziona il ruolo</option>
-                            @if (!Auth::user()->is_admin)
+                            @auth
+                                @if (!Auth::user()->is_admin)
+                                    <option value="admin">Amministratore</option>
+                                @endif
+                                @if (!Auth::user()->is_revisor)
+                                    <option value="revisor">Revisore</option>
+                                @endif
+                                @if (!Auth::user()->is_writer)
+                                    <option value="writer">Redattore</option>
+                                @endif
+                            @else
                                 <option value="admin">Amministratore</option>
-                            @endif
-                            @if (!Auth::user()->is_revisor)
                                 <option value="revisor">Revisore</option>
-                            @endif
-                            @if (!Auth::user()->is_writer)
                                 <option value="writer">Redattore</option>
-                            @endif
+                            @endauth
                         </select>
                         @error('role')
                             <span class="text-danger">{{ $message }}</span>
