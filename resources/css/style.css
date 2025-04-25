@@ -1,0 +1,205 @@
+body {
+    font-family: 'Cormorant', serif;
+    font-weight: 400;
+    background-color: var(--bg-primary);
+    color: var(--text-main);
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: "Playfair Display SC", serif;
+    font-optical-sizing: auto;
+    font-weight: 300;
+}
+
+/* Hero Section */
+.container-fluid.bg-secondary-subtle {
+    background-color: var(--bg-secondary) !important;
+    color: var(--text-main);
+    border-bottom: 1px solid var(--border-light);
+}
+
+/* Titolo principale */
+.display-1 {
+    font-weight: 300;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+/* Card articoli */
+.card {
+    background-color: var(--bg-primary);
+    border: 1px solid var(--border-light);
+    box-shadow: 0 2px 6px var(--shadow-soft);
+    transition: transform 0.2s ease-in-out;
+    border-radius: 8px;
+}
+.card:hover {
+    transform: translateY(-3px);
+}
+
+/* Titolo articoli */
+.card-title {
+    font-size: 1.25rem;
+    font-weight: 300;
+}
+
+/* Sottotitolo articoli */
+.card-subtitle {
+    font-size: 0.95rem;
+    color: var(--text-muted);
+}
+
+/* Categoria */
+.card .text-muted a {
+    text-decoration: none;
+    transition: color 0.2s;
+}
+.card .text-muted a:hover {
+    color: var(--text-main);
+}
+
+/* Card footer */
+.card-footer {
+    background-color: var(--accent-light);
+    font-size: 0.85rem;
+    color: var(--text-muted);
+    border-top: 1px solid var(--border-light);
+}
+
+/* Pulsanti */
+.btn-outline-secondary {
+    border-color: var(--text-main);
+    color: var(--text-main);
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    border-radius: 30px;
+    padding: 5px 12px;
+}
+.btn-outline-secondary:hover {
+    background-color: var(--text-main);
+    color: var(--bg-primary);
+}
+
+/* Alert messaggio */
+.alert-success {
+    background-color: var(--success-bg);
+    color: var(--success-text);
+    border: 1px solid var(--success-border);
+    border-radius: 6px;
+    padding: 1rem 1.25rem;
+    font-size: 0.95rem;
+}
+
+
+footer {
+    background-color: var(--accent-light);
+    color: var(--text-main);
+    border-top: 1px solid var(--border-light);
+    padding-top: 2rem;
+    font-size: 0.9rem;
+    margin-top: 4rem;
+}
+
+footer a {
+    color: var(--text-main);
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.2s ease-in-out;
+}
+
+footer a:hover {
+    color: var(--text-muted);
+}
+
+/* Piccola sezione copyright */
+footer .p-3 {
+    background-color: var(--bg-secondary);
+    border-top: 1px solid var(--border-light);
+    color: var(--text-muted);
+}
+
+
+
+
+/* Header */
+.container-fluid.bg-secondary-subtle {
+    background-color: var(--bg-secondary) !important;
+    color: var(--text-main);
+    border-bottom: 1px solid var(--border-light);
+    letter-spacing: 1px;
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+}
+
+/* Titolo principale */
+.display-1 {
+    font-weight: 300;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+/* Immagine dell'articolo */
+img.img-fluid {
+    max-width: 50%;
+    margin: 0 auto;
+    display: block;
+    border-radius: 8px;
+    margin-bottom: 2rem;
+}
+
+/* Sezione Testo */
+h2 {
+    font-size: 1.75rem;
+    font-weight: 400;
+    margin-top: 1.5rem;
+    color: var(--text-main);
+}
+
+/* Dettagli Categoria e Data */
+p.fs-5 {
+    font-size: 1rem;
+    color: var(--text-muted);
+    text-align: center;
+}
+
+.text-muted.my-3 {
+    font-size: 0.9rem;
+    color: var(--text-muted);
+}
+
+/* Corpo del testo */
+p {
+    font-size: 1.125rem;
+    line-height: 1.6;
+    color: var(--text-main);
+    text-align: justify;
+    margin-bottom: 1.5rem;
+}
+
+/* Link nel testo */
+.text-secondary {
+    color: var(--text-main);
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.text-secondary:hover {
+    color: var(--text-muted);
+}
+
+/* Sezione finale */
+hr {
+    border-color: var(--border-light);
+    margin-bottom: 2rem;
+}
+
+.text-center a {
+    font-size: 1rem;
+    font-weight: 500;
+    color: var(--text-main);
+    transition: color 0.2s;
+}
+
+.text-center a:hover {
+    color: var(--text-muted);
+}
