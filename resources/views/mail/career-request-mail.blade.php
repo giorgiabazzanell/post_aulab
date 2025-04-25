@@ -1,4 +1,3 @@
-<!-- filepath: /Users/giorgiabazzanella/portfolio/post_aulab/resources/views/mail/career-request-mail.blade.php -->
 <!DOCTYPE html>
 <html lang="en">
 <head>

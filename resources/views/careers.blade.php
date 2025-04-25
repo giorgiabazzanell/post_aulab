@@ -1,4 +1,3 @@
-<!-- filepath: /Users/giorgiabazzanella/portfolio/post_aulab/resources/views/careers.blade.php -->
 <x-layout>
     <div class="container-fluid p-5 bg-secondary-subtle text-center">
         <div class="row justify-content-center">

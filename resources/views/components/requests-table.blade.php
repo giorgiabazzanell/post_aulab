@@ -1,8 +1,3 @@
-<div>
-    <!-- He who is contented is rich. - Laozi -->
-</div>
-
-<!-- filepath: /Users/giorgiabazzanella/portfolio/post_aulab/resources/views/components/requests-table.blade.php -->
 <table class="table table-striped table-hover">
     <thead class="table-dark">
         <tr>
