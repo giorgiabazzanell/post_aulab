@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Article;
+use App\Models\Tag;
 use App\Models\Category;
 use App\Models\User; // Importa il modello User
 use Illuminate\Http\Request;
@@ -18,7 +19,7 @@ class ArticleController extends Controller implements HasMiddleware
     public static function middleware()
     {
         return [
-            new Middleware('auth', except: ['index', 'show', 'homepage', 'byCategory', 'byUser']),
+            new Middleware('auth', except: ['index', 'show', 'homepage', 'byCategory', 'byUser', 'articleSearch']),
         ];
     }
 
@@ -89,8 +90,9 @@ class ArticleController extends Controller implements HasMiddleware
             'body' => 'required|min:10',
             'image' => 'required|image',
             'category' => 'required',
+            'tags' => 'required|string',
         ]);
-    
+
         $article = Article::create([
             'title' => $request->title,
             'subtitle' => $request->subtitle,
@@ -99,7 +101,21 @@ class ArticleController extends Controller implements HasMiddleware
             'category_id' => $request->category,
             'user_id' => Auth::user()->id,
         ]);
-    
+
+        // Gestione dei tags
+        $tags = explode(',', $request->tags);
+
+        foreach($tags as $i => $tag) {
+            $tags[$i] = trim($tag);
+        }
+
+        foreach($tags as $tag) {
+            $newTag = Tag::updateOrCreate([
+                'name' => strtolower($tag)
+            ]);
+            $article->tags()->attach($newTag);
+        }
+
         return redirect(route('homepage'))->with('message', 'Articolo creato con successo');
     }
 
@@ -133,5 +149,19 @@ class ArticleController extends Controller implements HasMiddleware
     public function destroy(Article $article)
     {
         //
+    }
+
+    /**
+     * Search articles based on query.
+     */
+    public function articleSearch(Request $request)
+    {
+        $query = $request->input('query');
+        $articles = Article::search($query)
+            ->where('is_accepted', true)
+            ->orderBy('created_at', 'desc')
+            ->get();
+
+        return view('article.search-index', compact('articles', 'query'));
     }
 }

@@ -17,9 +17,9 @@
                 </li>
             </ul>
 
-            <form class="d-flex me-3" role="search">
-                <input class="form-control me-2" type="search" placeholder="Cerca..." aria-label="Search">
-                <button class="btn btn-outline-dark" type="submit">Cerca</button>
+            <form action="{{ route('article.search') }}" method="GET" class="d-flex me-3" role="search">
+                <input class="form-control me-2" type="search" name="query" placeholder="Cerca tra gli articoli..." aria-label="Search">
+                <button class="btn btn-outline-secondary" type="submit">Cerca</button>
             </form>
 
             <ul class="navbar-nav ms-auto mb-2 mb-lg-0">

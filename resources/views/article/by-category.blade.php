@@ -30,6 +30,11 @@
                                 Redatto il {{ $article->created_at->format('d/m/Y') }} <br>
                                 da <a href="{{ route('article.byUser', $article->user) }}" class="text-muted">{{ $article->user->name }}</a>
                             </p>
+                            <p class="small text-muted my-0">
+                                @foreach ($article->tags as $tag)
+                                    #{{ $tag->name }}
+                                @endforeach
+                            </p>
                             <a href="{{ route('article.show', $article) }}" class="btn btn-outline-secondary">Leggi</a>
                         </div>
                     </div>
